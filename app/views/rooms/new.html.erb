@@ -1,5 +1,10 @@
-<h1>New Room</h1>
+<h1>Add  room</h1>
 
-<%= render 'form', room: @room %>
+<%= form_for @room do |f| %>
+  <div class="form-group">
+    <%= f.label :rname %>
+    <%= f.text_field :rname, autofocus: true, class: 'form-control' %>
+  </div>
 
-<%= link_to 'Back', rooms_path %>
+  <%= f.submit "Add!", class: 'btn btn-primary' %>
+<% end %>

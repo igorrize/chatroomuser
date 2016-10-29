@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'ajax'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
@@ -11,10 +10,11 @@ gem 'rspec', '~> 3.5'
 gem 'factory_girl', '~> 4.7'
 gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
-gem 'carrierwave'
+gem 'carrierwave', '~> 0.11.2'
 gem 'rubocop', require: false, group: [:development, :test], github: 'bbatsov/rubocop'
-gem 'slim-rails'
-
+gem 'slim-rails', '~> 3.1', '>= 3.1.1'
+gem 'redis', '~> 3.2'
+gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer'
 gem 'bootstrap'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -45,6 +45,8 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'sqlite3'
+
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
