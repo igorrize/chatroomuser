@@ -7,8 +7,7 @@ default: &default
 
 development:
   <<: *default
-adapter: postgresql
-
+  adapter: postgresql
   database: intense-sierra-84993
 
 # Warning: The database defined as "test" will be erased and
